@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["queryCompiler"]   // ini bantu stabilkan WASM
+  previewFeatures = ["strictUndefinedChecks"]
 }
 
 datasource db {
