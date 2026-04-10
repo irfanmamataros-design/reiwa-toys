@@ -3,9 +3,11 @@ import "dotenv/config";
 import { defineConfig } from "prisma/config";
 
 export default defineConfig({
-  schema: "prisma/schema.prisma",
+  schema: {
+    path: "prisma/schema.prisma",   // gunakan objek dengan key path
+  },
   datasource: {
     provider: "mysql",
-    url: process.env.DATABASE_URL!, // gunakan process.env langsung
+    url: process.env.DATABASE_URL!,
   },
 });
