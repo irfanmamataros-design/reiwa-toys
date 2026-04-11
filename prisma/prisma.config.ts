@@ -1,11 +1,11 @@
-// prisma.config.ts
+// prisma.config.ts  ← Letakkan di ROOT folder (sama dengan package.json)
 import "dotenv/config";
-import { defineConfig } from "prisma/config";
 
-export default defineConfig({
+const config = {
   schema: "prisma/schema.prisma",
   datasource: {
-    provider: "mysql",
-    url: process.env.DATABASE_URL!, // gunakan process.env langsung
+    url: process.env.DATABASE_URL,
   },
-});
+} as const;
+
+export default config;
